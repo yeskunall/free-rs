@@ -1,0 +1,9 @@
+*
+!.gitignore
+!Cargo.lock
+!Cargo.toml
+!license
+!readme.md
+
+!src/
+!src/**

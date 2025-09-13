@@ -1,0 +1,12 @@
+[package]
+name = "free"
+version = "0.0.0"
+edition = "2024"
+rust-version = "1.89"
+description = "A friendlier vm_stat(1) written in Rust."
+categories = ["command-line-utilities"]
+homepage = "https://github.com/yeskunall/free-rs"
+repository = "https://github.com/yeskunall/free-rs"
+licence = "MIT"
+
+[dependencies]
