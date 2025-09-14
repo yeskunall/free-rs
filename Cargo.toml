@@ -10,3 +10,4 @@ repository = "https://github.com/yeskunall/free-rs"
 licence = "MIT"
 
 [dependencies]
+libc = "0.2.175"
