@@ -1,9 +1,13 @@
 *
+!.editorconfig
+!.gitattributes
 !.gitignore
 !Cargo.lock
 !Cargo.toml
 !license
 !readme.md
 
+!.github/
+!.github/**
 !src/
 !src/**
