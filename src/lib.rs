@@ -22,3 +22,27 @@ pub fn get_page_size() -> usize {
     page_size
 }
 
+/// Get virtual memory statistics.
+///
+///
+pub fn get_vm_statistics() -> libc::vm_statistics64 {
+    let mut count: u32 = libc::HOST_VM_INFO64_COUNT;
+
+    unsafe {
+        let mut stats = std::mem::MaybeUninit::<libc::vm_statistics64>::uninit();
+
+        let kern_ret = libc::host_statistics64(
+            #[allow(deprecated)]
+            libc::mach_host_self(),
+            libc::HOST_VM_INFO64,
+            &mut stats as *mut _ as *mut _,
+            &mut count,
+        );
+
+        if kern_ret != 0 {
+            panic!("host_statistics64 failed with kern_return_t = {}", kern_ret);
+        }
+
+        stats.assume_init()
+    }
+}
