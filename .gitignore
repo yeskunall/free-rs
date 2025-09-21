@@ -4,6 +4,7 @@
 !.gitignore
 !Cargo.lock
 !Cargo.toml
+!rust-toolchain.toml
 !license
 !readme.md
 
